@@ -67,10 +67,12 @@ public class Utilitaire {
                             UrlAnnotation urlAnnotation = methode.getAnnotation(UrlAnnotation.class);
                             UrlInfo u = new UrlInfo();
                             u.setAction(urlAnnotation.httpmethode());
-                            u.setClazz(clazz);
                             u.setUrl(urlAnnotation.value()); 
                             MethodeInfo m = new MethodeInfo();
                             m.setMethode(methode);
+                            if(mapping.containsKey(u)){
+                                throw new IllegalStateException("route en double");
+                            };
                             mapping.put(u , m);
                         }
                 result.add(clazz);
