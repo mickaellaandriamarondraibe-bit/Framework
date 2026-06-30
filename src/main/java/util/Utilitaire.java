@@ -1,4 +1,4 @@
-package controller;
+package util;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
+
+import annotation.UrlAnnotation;
+import model.MethodeInfo;
+import model.UrlInfo;
 
 public class Utilitaire {
 
